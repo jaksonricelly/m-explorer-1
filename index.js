@@ -39,12 +39,12 @@ function jogaDados() {
   const dadosJogados = // html personalizado para exibir as imagens dos dados e o total de pontos obtidos no lançamento
     `<img
   id="dado1"
-  src="/img/ldadon${numAleatoryd1 + '.png'}"
+  src="./img/ldadon${numAleatoryd1 + '.png'}"
   alt="lado do dado}"
 />
 <img
   id="dado2"
-  src="/img/ldadon${numAleatoryd2 + '.png'}"
+  src="./img/ldadon${numAleatoryd2 + '.png'}"
   alt="lado do dado}"
 />` +
     '<h2>' +
@@ -54,14 +54,14 @@ function jogaDados() {
   // esconder e mostrar html de elementos
   apostaElement.innerHTML = ''
   sectionHeader.style.display = 'initial'
-  sectionHeader.innerHTML = "<img src='/img/dados_girando.gif' />"
+  sectionHeader.innerHTML = "<img src='./img/dados_girando.gif' />"
 
   //depois de 1 segundo, analisa se ganhou e exibir
   setTimeout(function () {
     sectionHeader.style.display = 'none'
     if (totalPontos == 7) {
       sectionHeader.style.display = 'initial'
-      sectionHeader.innerHTML = "<img src='/img/win.gif' />"
+      sectionHeader.innerHTML = "<img src='./img/win.gif' />"
       setTimeout(function () {
         sectionHeader.style.display = 'none'
         inputAposta.value = ''
